@@ -8,7 +8,6 @@ Proyecto desarrollado para la **Evaluación 3 de Programación Front End**, enfo
 - **Institución:** Inacap, sede Talca
 
 ---
----
 
 ## Descripción del Proyecto
 
@@ -16,7 +15,6 @@ Esta es una **Single Page Application (SPA)** construida con **Create React App*
 
 Toda la información se guarda en el `localStorage` del navegador, asegurando que los datos persistan entre sesiones. La lista de eventos se presenta ordenada por fecha y el diseño se adapta a distintos dispositivos gracias a Bootstrap.
 
----
 ---
 
 ## Funcionalidades
@@ -31,7 +29,6 @@ Toda la información se guarda en el `localStorage` del navegador, asegurando qu
 * **Diseño Adaptable (Responsive):** La interfaz se ajusta correctamente a pantallas de escritorio, tablets y móviles.
 
 ---
----
 
 ## Tecnologías Utilizadas 🛠️
 
@@ -44,7 +41,6 @@ Toda la información se guarda en el `localStorage` del navegador, asegurando qu
 * **Bootstrap 5:** Framework de CSS para un diseño rápido, moderno y responsivo.
 * **LocalStorage API:** Para el almacenamiento de datos en el navegador.
 
----
 ---
 
 ## Instalación y Uso Local
