@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Agenda de Eventos con React 📅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto desarrollado para la **Evaluación 3 de Programación Front End**, enfocado en la aplicación práctica de **React** para crear una aplicación web funcional que permite gestionar eventos personales.
 
-## Available Scripts
+- **Autores:** Johan Manriquez, Víctor Mondaca
+- **Ramo:** Programación Front End
+- **Carrera:** Analista Programador
+- **Institución:** Inacap, sede Talca
 
-In the project directory, you can run:
+---
+---
 
-### `npm start`
+## Descripción del Proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Esta es una **Single Page Application (SPA)** construida con React que permite a los usuarios registrar, editar y eliminar eventos como reuniones, cumpleaños o recordatorios.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Toda la información se guarda en el `localStorage` del navegador, asegurando que los datos persistan entre sesiones. La lista de eventos se presenta ordenada por fecha y el diseño se adapta a distintos dispositivos gracias a Bootstrap.
 
-### `npm test`
+---
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades
 
-### `npm run build`
+* **Formulario para Crear y Editar:** Un único formulario que permite tanto agregar nuevos eventos como modificar los existentes.
+* **Gestión de Eventos (CRUD):**
+    * **C**rear: Agregar nuevos eventos con título, fecha, lugar y descripción.
+    * **L**eer: Visualizar la lista de eventos ordenada por fecha.
+    * **A**ctualizar: Editar cualquier evento existente.
+    * **E**liminar: Borrar eventos de la lista.
+* **Persistencia de Datos:** Almacenamiento automático en el `localStorage` del navegador.
+* **Diseño Adaptable (Responsive):** La interfaz se ajusta correctamente a pantallas de escritorio, tablets y móviles.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologías Utilizadas 🛠️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **React:** Biblioteca principal para construir la interfaz de usuario de manera declarativa y basada en componentes.
+* **React Hooks:**
+    * `useState`: Para manejar el estado local de los componentes (lista de eventos, datos del formulario, etc.).
+    * `useEffect`: Para gestionar efectos secundarios, como la sincronización del estado con `localStorage`.
+* **JavaScript (ES6+):** Lenguaje utilizado para toda la lógica de la aplicación.
+* **Vite:** Herramienta de construcción y servidor de desarrollo local de alta velocidad.
+* **Bootstrap 5:** Framework de CSS para un diseño rápido, moderno y responsivo.
+* **LocalStorage API:** Para el almacenamiento de datos en el navegador.
 
-### `npm run eject`
+---
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación y Uso Local
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/VJMondacaO/agendaeventos.git
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.  **Navega a la carpeta del proyecto:**
+    ```bash
+    cd nombre-de-la-carpeta
+    ```
 
-## Learn More
+3.  **Instala las dependencias:**
+    (Esto descargará React y otras librerías necesarias en la carpeta `node_modules`).
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4.  **Inicia la aplicación en modo de desarrollo:**
+    ```bash
+    npm run dev
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Abre la URL que aparezca en tu terminal
