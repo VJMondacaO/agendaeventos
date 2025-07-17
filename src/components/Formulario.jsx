@@ -13,12 +13,16 @@ function Formulario({ agregarEvento, eventoEditando }) {
     descripcion: ''
   });
 
+  // NUEVO: Crea un estado para el mensaje de error del formulario.
+  const [error, setError] = useState('');
+
   // Este 'efecto' se ejecuta cuando 'eventoEditando' cambia.
-  // Sirve para llenar o limpiar el formulario.
+  // Sirve para llenar el formulario o limpiarlo.
   useEffect(() => {
     if (eventoEditando) {
-      // Si se recibe un evento para editar, se llenan los campos del formulario con sus datos.
+      // Si se recibe un evento para editar, se llenan los campos del formulario.
       setForm(eventoEditando);
+      setError(''); // Limpia cualquier error previo al empezar a editar.
     } else {
       // Si no, se limpia el formulario a su estado inicial.
       setForm({ id: null, titulo: '', fecha: '', lugar: '', descripcion: '' });
@@ -27,6 +31,8 @@ function Formulario({ agregarEvento, eventoEditando }) {
 
   // Se ejecuta cada vez que el usuario escribe en un campo del formulario.
   const handleChange = (e) => {
+    // NUEVO: Limpia el mensaje de error en cuanto el usuario empieza a escribir.
+    setError('');
     // Actualiza el campo correspondiente en el estado del formulario.
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -37,10 +43,13 @@ function Formulario({ agregarEvento, eventoEditando }) {
 
     // Valida que todos los campos estén llenos.
     if (!form.titulo || !form.fecha || !form.lugar || !form.descripcion) {
-      alert('Todos los campos son obligatorios');
+      // MODIFICADO: En lugar de alert(), actualiza el estado con el mensaje de error.
+      setError('Todos los campos son obligatorios');
       return; // Detiene la ejecución si un campo está vacío.
     }
 
+    // Si la validación es exitosa, se asegura de limpiar cualquier error.
+    setError('');
     // Llama a la función del componente padre para guardar los datos.
     agregarEvento(form);
     // Limpia el formulario después de enviarlo.
@@ -70,8 +79,12 @@ function Formulario({ agregarEvento, eventoEditando }) {
         <label className="form-label">Descripción</label>
         <textarea name="descripcion" value={form.descripcion} onChange={handleChange} className="form-control" />
       </div>
+
+      {/* NUEVO: Muestra el mensaje de error si el estado 'error' tiene contenido. */}
+      {error && <div className="alert alert-danger">{error}</div>}
+
       {/* Botón de envío */}
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary mt-3">
         {/* El texto del botón cambia si se está editando o agregando. */}
         {eventoEditando ? 'Actualizar Evento' : 'Agregar Evento'}
       </button>
