@@ -12,7 +12,7 @@ Proyecto desarrollado para la **Evaluación 3 de Programación Front End**, enfo
 
 ## Descripción del Proyecto
 
-Esta es una **Single Page Application (SPA)** construida con React que permite a los usuarios registrar, editar y eliminar eventos como reuniones, cumpleaños o recordatorios.
+Esta es una **Single Page Application (SPA)** construida con **Create React App** que permite a los usuarios registrar, editar y eliminar eventos como reuniones, cumpleaños o recordatorios.
 
 Toda la información se guarda en el `localStorage` del navegador, asegurando que los datos persistan entre sesiones. La lista de eventos se presenta ordenada por fecha y el diseño se adapta a distintos dispositivos gracias a Bootstrap.
 
@@ -35,12 +35,12 @@ Toda la información se guarda en el `localStorage` del navegador, asegurando qu
 
 ## Tecnologías Utilizadas 🛠️
 
-* **React:** Biblioteca principal para construir la interfaz de usuario de manera declarativa y basada en componentes.
+* **React:** Biblioteca principal para construir la interfaz de usuario.
 * **React Hooks:**
-    * `useState`: Para manejar el estado local de los componentes (lista de eventos, datos del formulario, etc.).
-    * `useEffect`: Para gestionar efectos secundarios, como la sincronización del estado con `localStorage`.
+    * `useState`: Para manejar el estado local de los componentes.
+    * `useEffect`: Para gestionar efectos secundarios, como la sincronización con `localStorage`.
+* **Create React App:** Entorno de desarrollo utilizado para la configuración inicial y los scripts del proyecto.
 * **JavaScript (ES6+):** Lenguaje utilizado para toda la lógica de la aplicación.
-* **Vite:** Herramienta de construcción y servidor de desarrollo local de alta velocidad.
 * **Bootstrap 5:** Framework de CSS para un diseño rápido, moderno y responsivo.
 * **LocalStorage API:** Para el almacenamiento de datos en el navegador.
 
@@ -53,23 +53,22 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone https://github.com/VJMondacaO/agendaeventos.git
+    git clone [https://github.com/VJMondacaO/agendaeventos.git](https://github.com/VJMondacaO/agendaeventos.git)
     ```
 
 2.  **Navega a la carpeta del proyecto:**
     ```bash
-    cd nombre-de-la-carpeta
+    cd agendaeventos
     ```
 
 3.  **Instala las dependencias:**
-    (Esto descargará React y otras librerías necesarias en la carpeta `node_modules`).
+    (Esto descargará React y otras librerías en la carpeta `node_modules`).
     ```bash
     npm install
     ```
 
 4.  **Inicia la aplicación en modo de desarrollo:**
+    (Esto abrirá la aplicación en tu navegador en `http://localhost:3000`).
     ```bash
-    npm run dev
+    npm start
     ```
-
-Abre la URL que aparezca en tu terminal
